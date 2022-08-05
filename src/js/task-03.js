@@ -12,3 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const gallery = document.querySelector('.gallery');
+
+const resultMurcup = images.reduce((murcup, images) => {
+  const { url, alt } = images;
+  return murcup + `<img src=${url} alt=${alt}></img>`;
+}, '');
+
+gallery.insertAdjacentHTML('beforeend', resultMurcup);
