@@ -15,9 +15,9 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
-const resultMurcup = images.reduce((murcup, images) => {
+const resultMarcup = images.reduce((marcup, images) => {
   const { url, alt } = images;
-  return murcup + `<li><img src=${url} alt=${alt}></img></li>`;
+  return marcup + `<li><img src=${url} alt=${alt}></img></li>`;
 }, '');
-console.log(resultMurcup);
-gallery.insertAdjacentHTML('beforeend', resultMurcup);
+
+gallery.insertAdjacentHTML('beforeend', resultMarcup);
