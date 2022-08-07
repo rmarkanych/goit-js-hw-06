@@ -5,7 +5,7 @@ nameInput.addEventListener('input', changeName);
 
 function changeName(event) {
   nameOutput.textContent = event.currentTarget.value;
-  if (nameOutput.textContent.trim() === '') {
+  if (event.currentTarget.value.trim() === '') {
     nameOutput.textContent = 'Anonymous';
   }
 }
