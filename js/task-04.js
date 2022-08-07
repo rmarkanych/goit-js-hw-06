@@ -3,6 +3,10 @@ const increment = document.querySelector('[data-action="increment"]');
 const decrement = document.querySelector('[data-action="decrement"]');
 let counterValue = 0;
 
+increment.addEventListener('click', changeValue);
+
+decrement.addEventListener('click', changeValue);
+
 function changeValue(event) {
   if (event.currentTarget === decrement) {
     counterValue++;
@@ -12,7 +16,3 @@ function changeValue(event) {
     value.textContent = counterValue;
   }
 }
-
-increment.addEventListener('click', changeValue);
-
-decrement.addEventListener('click', changeValue);
