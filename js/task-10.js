@@ -6,6 +6,7 @@ const boxes = document.querySelector('#boxes');
 
 let divWidth = 30;
 let divHeight = 30;
+let step = 10;
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -20,8 +21,8 @@ function createBoxes() {
       'beforeend',
       `<div class="div-create" style="
       background-color:${getRandomHexColor()};
-          width:${(divWidth += 10)}px;
-          height:${(divHeight += 10)}px"
+          width:${(divWidth += step)}px;
+          height:${(divHeight += step)}px"
       ></div>`
     );
   }

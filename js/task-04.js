@@ -9,10 +9,10 @@ decrement.addEventListener('click', changeValue);
 
 function changeValue(event) {
   if (event.currentTarget === decrement) {
-    counterValue++;
+    counterValue--;
     value.textContent = counterValue;
   } else if (event.currentTarget === increment) {
-    counterValue--;
+    counterValue++;
     value.textContent = counterValue;
   }
 }
